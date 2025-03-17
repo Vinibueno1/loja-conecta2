@@ -24,4 +24,10 @@
     height: 450;
     width: 300;
     object-fit: contain;
+    padding: 20px;
+}
+
+.card-img-top:hover {
+    transform: scale(1.2);
+    transition-duration: 1.4s;
 }

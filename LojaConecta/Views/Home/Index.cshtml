@@ -21,20 +21,29 @@
                         <div class="col mb-5">
                             <div class="card h-100">
                                 <!-- Product image-->
-                                <img class="card-img-top" src="~/img/produtos/Monitor 1/foto1.png" alt="..." />
+                                @if (produto.Fotos.Count > 0)
+                                {
+                                    <img class="card-img-top" src="@produto.Fotos[0].Foto" 
+                                    alt="@produto.Nome" />
+                                }
+                                else 
+                                {
+                                    <img class="card-img-top" src="~/img/sem imagem.png" 
+                                    alt="@produto.Nome" />
+                                }
                                 <!-- Product details-->
                                 <div class="card-body p-4">
                                     <div class="text-center">
                                         <!-- Product name-->
-                                        <h5 class="fw-bolder">Monitor Gamer Mancer Horizon Z2, 21.5 Pol, VA, FHD, 100Hz, 1ms, HDMI/VGA, MCR-HZN21-BL2</h5>
+                                        <h5 class="fw-bolder">@produto.Nome</h5>
                                         <!-- Product price-->
-                                        <span class="text-muted text-decoration-line-through">R$ 611,75</span>
-                                        R$ 459,99
+                                        R$ @produto.ValorVenda.ToString("N2")
                                     </div>
                                 </div>
                                 <!-- Product actions-->
                                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                    <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Ver Opções</a></div>
+                                    <div class="text-center"><a class="btn btn-outline-success mt-auto"
+                                     asp-controller="Home" asp-action="Produto" asp-route-id="@produto.Id" >Ver Detalhes</a></div>
                                 </div>
                             </div>
                         </div>
