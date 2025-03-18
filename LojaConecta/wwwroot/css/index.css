@@ -9,7 +9,19 @@
 
 #navbar {
     background-color: #62c524;
-    ;
+}
+
+#navbarADM {
+    background-color: #000000;
+}
+
+#sidenavADM {
+    color: aliceblue;
+    background-color: #000000;
+}
+
+#sidenavfooter {
+    background-color: #000000;
 }
 
 #Oferta {
